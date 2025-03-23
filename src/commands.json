@@ -1,0 +1,15 @@
+{
+  "TRANSLATE": {
+    "options": [
+      {
+        "type": 3,
+        "name": "source",
+        "description": "Text to translate",
+        "required": true
+      }
+    ],
+    "name": "translate",
+    "description": "Translation service powered by Gemini Flash 2.0",
+    "type": 1
+  }
+}

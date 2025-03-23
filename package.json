@@ -1,0 +1,35 @@
+{
+  "name": "gemiglot",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "fix": "biome check --fix",
+    "generate-commands": "node --experimental-strip-types script/generate.ts && yarn fix src/commands.json",
+    "generate-types": "wrangler types && yarn fix worker-configuration.d.ts",
+    "lint": "biome check",
+    "ngrok": "ngrok http 8787",
+    "register-commands": "node --experimental-strip-types script/register.ts",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@openrouter/ai-sdk-provider": "0.4.3",
+    "ai": "4.2.0",
+    "discord-interactions": "4.1.1",
+    "hono": "4.7.5",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@tsconfig/strictest": "2.0.5",
+    "discord.js": "14.18.0",
+    "dotenv": "16.4.7",
+    "ngrok": "5.0.0-beta.2",
+    "typescript": "5.8.2",
+    "wrangler": "4.4.0"
+  },
+  "packageManager": "yarn@4.7.0"
+}
